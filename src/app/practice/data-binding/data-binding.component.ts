@@ -13,4 +13,7 @@ export class DataBindingComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  display() {
+    window.alert('clicked');
+  }
 }
