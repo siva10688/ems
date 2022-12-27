@@ -1,0 +1,39 @@
+<!--<div>
+    <div class="container-fulid">
+        <div class="row">
+            <div class="col">
+                <h2>Employees</h2>
+                <ol>
+                    <li *ngfor="let employee of employees">
+                        <span>{{employee.id}}</span>
+                        <span>{{employee.name}}</span>
+                        <span>{{employee.address}}</span>
+                        <span>{{employee.salary}}</span>
+                        <span>{{employee.mobilenumber}}</span>
+                    </li>
+                </ol>
+            </div>
+    </div>
+</div>-->
+
+
+<button> New</button>
+<div class="container-fluid">
+<table >
+    <thead>EmployeeList</thead>
+<tr>
+    <th>id</th>
+    <th>name</th>
+    <th>address</th>
+    <th>salary</th>
+    <th>mobilenumber</th>
+</tr>
+<tr *ngFor="let employee of employees">
+    <td>{{employee.id}}</td>
+    <td>{{employee.name}}</td>
+    <td>{{employee.address}}</td>
+    <td>{{employee.salary}}</td>
+    <td>{{employee.mobilenumber}}</td>
+</tr>
+</table>
+</div>
