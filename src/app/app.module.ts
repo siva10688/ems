@@ -6,12 +6,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DataBindingComponent } from './practice/data-binding/data-binding.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { CustomLowerCasePipe } from './pipes/custom-lower.pipe';
+import { EmployeeComponent } from './employee/employee.component';
+import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+import { TestDirectivesComponent } from './practice/directives/test-directives/test-directives.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DataBindingComponent,
-    EmployeeListComponent
+    EmployeeListComponent,
+    CustomLowerCasePipe,
+    EmployeeComponent,
+    EmployeeDetailsComponent,
+    TestDirectivesComponent
   ],
   imports: [
     BrowserModule,
