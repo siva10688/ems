@@ -1,1 +1,16 @@
-<p>test-directives works!</p>
+<div ngClass="txt-color-red">
+  1. Directives are classes that add additional behavior to elements in your
+  Angular applications.
+</div>
+<div [ngClass]="className" *ngIf="show">
+  2. Directives are classes that add additional behavior to elements in your
+  Angular applications.
+</div>
+<div [ngClass]="getClass()" *ngShow="show">
+  3. Directives are classes that add additional behavior to elements in your
+  Angular applications.
+</div>
+<div [ngStyle]="greenStyle">
+  4. Directives are classes that add additional behavior to elements in your
+  Angular applications.
+</div>
