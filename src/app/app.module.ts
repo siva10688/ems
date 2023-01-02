@@ -5,10 +5,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DataBindingComponent } from './practice/data-binding/data-binding.component';
-import { EmployeeListComponent } from './employee-list/employee-list.component';
-import { CustomLowerCasePipe } from './pipes/custom-lower.pipe';
+import { EmployeeListComponent } from './employee/employee-list/employee-list.component';
+import { CustomLowerCasePipe } from './practice/pipes/custom-lower.pipe';
 import { EmployeeComponent } from './employee/employee.component';
-import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+import { EmployeeDetailsComponent } from './employee/employee-details/employee-details.component';
 import { TestDirectivesComponent } from './practice/directives/test-directives/test-directives.component';
 
 @NgModule({
