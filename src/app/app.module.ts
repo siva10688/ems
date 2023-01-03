@@ -12,6 +12,8 @@ import { TestDirectivesComponent } from './practice/directives/test-directives/t
 import { StudentComponent } from './student/student.component';
 import { StudentListComponent } from './student/student-list/student-list.component';
 import { StudentDetailsComponent } from './student/student-details/student-details.component';
+import { HomeComponent } from './home/home.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { StudentDetailsComponent } from './student/student-details/student-detai
     TestDirectivesComponent,
     StudentComponent,
     StudentListComponent,
-    StudentDetailsComponent
+    StudentDetailsComponent,
+    HomeComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
