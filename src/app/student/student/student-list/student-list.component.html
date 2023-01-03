@@ -1,0 +1,41 @@
+<div> Student Details</div>
+<button (click)="addStudent()">Add student</button>
+<div class="container-fluid">
+    <div>{{title}}</div>
+    
+    
+    <table>
+        <thead>Student List</thead>
+        <tr>
+            <th>name</th>
+            <th>id</th>
+            <th>branch</th>
+            <th>mobilenumber</th>
+        </tr>
+        <tr *ngFor="let student of students">
+            <td>{{student.name}}</td>
+            <td>{{student.id}}</td>
+            <td>{{student.branch}}</td>
+            <td>{{student.mobilenumber}}</td>
+            <td><button (click)="viewStudent(student)">View</button></td>
+
+        </tr>
+    </table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

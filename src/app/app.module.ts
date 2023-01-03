@@ -10,6 +10,9 @@ import { CustomLowerCasePipe } from './practice/pipes/custom-lower.pipe';
 import { EmployeeComponent } from './employee/employee.component';
 import { EmployeeDetailsComponent } from './employee/employee-details/employee-details.component';
 import { TestDirectivesComponent } from './practice/directives/test-directives/test-directives.component';
+import { StudentComponent } from './student/student/student.component';
+import { StudentListComponent } from './student/student/student-list/student-list.component';
+import { StudentDetailsComponent } from './student/student/student-details/student-details.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { TestDirectivesComponent } from './practice/directives/test-directives/t
     CustomLowerCasePipe,
     EmployeeComponent,
     EmployeeDetailsComponent,
-    TestDirectivesComponent
+    TestDirectivesComponent,
+    StudentComponent,
+    StudentListComponent,
+    StudentDetailsComponent
   ],
   imports: [
     BrowserModule,
