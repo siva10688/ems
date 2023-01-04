@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <form #employeeForm="ngForm" (submit)="submit(employeeForm.value)">
+        <h2>employee-forms</h2>
+        <table>
+            <tr>
+                <td>Id</td>
+                <td><input name="Id" ngModel #Id="ngModel" type="number"></td>
+                <td>Name</td>
+                <td><input name="Name" ngModel #Name="ngModel" type="text"></td>
+                <td>Address</td>
+                <td><input name="Address" ngModel #Address="ngModel" type="text"></td>
+                <td>Salary</td>
+                <td><input name="Salary" ngModel #Salary="ngModel" type="number"></td>
+                <td>MobileNumber</td>
+                <td><input name="MobileNumber" ngModel #MobileNumber="ngModel"></td>
+            </tr>
+        </table>
+        <button>Submit</button>
+    </form>
+</div>

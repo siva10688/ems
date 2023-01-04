@@ -13,6 +13,7 @@ import { TestDirectivesComponent } from './practice/directives/test-directives/t
 import { StudentComponent } from './student/student/student.component';
 import { StudentListComponent } from './student/student/student-list/student-list.component';
 import { StudentDetailsComponent } from './student/student/student-details/student-details.component';
+import { EmployeeFormsComponent } from './employee-forms/employee-forms.component'; 
 
 @NgModule({
   declarations: [
@@ -25,7 +26,9 @@ import { StudentDetailsComponent } from './student/student/student-details/stude
     TestDirectivesComponent,
     StudentComponent,
     StudentListComponent,
-    StudentDetailsComponent
+    StudentDetailsComponent,
+    EmployeeFormsComponent
+  
   ],
   imports: [
     BrowserModule,
