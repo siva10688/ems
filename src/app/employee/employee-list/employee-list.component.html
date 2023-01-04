@@ -36,7 +36,7 @@
             <td>{{employee.address | customlower}}</td>
             <td>{{employee.salary|currency}}</td>
             <td>{{employee.mobilenumber}}</td>
-            <td><button (click)="viewEmployee(employee)">View</button></td>
+            <td><button (click)="view(employee)">View</button><button (click)="edit(employee)">Edit</button></td>
         </tr>
     </table>
 </div>

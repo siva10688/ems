@@ -6,5 +6,6 @@ import { Employee } from '../models/employee.model';
 })
 export class EmployeeService {
   employee?: Employee;
+  action?: string;
   constructor() { }
 }

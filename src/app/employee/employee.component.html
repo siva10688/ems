@@ -1,2 +1,3 @@
 <app-employee-list [title]="title" (add)="employeeAdded($event)"></app-employee-list>
-<app-employee-details></app-employee-details>
+<app-employee-forms *ngIf="service.action==='edit'"></app-employee-forms>
+<app-employee-details *ngIf="service.action==='view'"></app-employee-details>

@@ -32,8 +32,14 @@ export class EmployeeListComponent implements OnInit {
     this.add.emit("Raju added");
   }
 
-  viewEmployee(employee: Employee) {
+  view(employee: Employee) {
+    this.service.action = "view";
     this.service.employee = employee
+  }
+
+  edit(employee: Employee) {
+    this.service.action = "edit";
+    this.service.employee = employee;
   }
 }
 
