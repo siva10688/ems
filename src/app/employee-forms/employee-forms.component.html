@@ -1,20 +1,27 @@
-<div class="container-fluid">
-    <form #employeeForm="ngForm" (submit)="submit(employeeForm.value)">
-        <h2>employee-forms</h2>
-        <table>
-            <tr>
-                <td>Id</td>
-                <td><input name="id" ngModel #id="ngModel" type="number"></td>
-                <td>Name</td>
-                <td><input name="name" ngModel #name="ngModel" type="text"></td>
-                <td>Address</td>
-                <td><input name="address" ngModel #address="ngModel" type="text"></td>
-                <td>Salary</td>
-                <td><input name="salary" ngModel #salary="ngModel" type="number"></td>
-                <td>MobileNumber</td>
-                <td><input name="mobileNumber" ngModel #mobileNumber="ngModel"></td>
-            </tr>
-        </table>
-        <button>Submit</button>
-    </form>
+<div class="container-fluid" *ngIf="employee">
+
+    <h2>employee-forms</h2>
+    <table>
+        <tr>
+            <td>Id</td>
+            <td><input [(ngModel)]="employee.id" type="number"></td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td><input [(ngModel)]="employee.name" type="text"></td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td><input [(ngModel)]="employee.address" type="text"></td>
+        </tr>
+        <tr>
+            <td>Salary</td>
+            <td><input [(ngModel)]="employee.salary" type="number"></td>
+        </tr>
+        <tr>
+            <td>MobileNumber</td>
+            <td><input [(ngModel)]="employee.mobilenumber" type="text"></td>
+        </tr>
+    </table>
+    <button (click)="submit()">Submit</button>
 </div>

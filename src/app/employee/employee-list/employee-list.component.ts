@@ -29,17 +29,18 @@ export class EmployeeListComponent implements OnInit {
   }
 
   addEmployee() {
+    this.service.updateEmployee({} as Employee);
     this.add.emit("Raju added");
   }
 
   view(employee: Employee) {
     this.service.action = "view";
-    this.service.employee = employee
+    this.service.updateEmployee(employee);
   }
 
   edit(employee: Employee) {
     this.service.action = "edit";
-    this.service.employee = employee;
+    this.service.updateEmployee(employee);
   }
 }
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Employee } from '../employee/models/employee.model';
 import { EmployeeService } from '../employee/services/employee.service';
 
 
@@ -10,17 +11,21 @@ import { EmployeeService } from '../employee/services/employee.service';
   styleUrls: ['./employee-forms.component.css']
 })
 export class EmployeeFormsComponent implements OnInit {
-  employeeForm: NgForm;
+  employee?: Employee;
 
   constructor(private service: EmployeeService) {
-    this.employeeForm = <NgForm>{ value: this.service.employee };
   }
 
   ngOnInit(): void {
+    this.service.employee$.subscribe(employee => {
+      if (employee) {
+        this.employee = employee;
+      }
+    })
   }
 
 
-  public submit(formdata: any) {
-    alert(JSON.stringify(formdata));
+  public submit() {
+    alert(JSON.stringify(this.employee));
   }
 }
