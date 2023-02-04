@@ -1,0 +1,32 @@
+<div class="container-fluid" *ngIf="employee">
+
+    <h2>employee-forms</h2>
+    <table>
+        <tr>
+            <td>id</td>
+            <td><input [(ngModel)]="employee.id" type="number"></td>
+        </tr>
+        <tr>
+            <td>eName</td>
+            <td><input [(ngModel)]="employee.eName" type="text"></td>
+        </tr>
+        <tr>
+            <td>eAddress</td>
+            <td><input [(ngModel)]="employee.eAddress" type="text"></td>
+        </tr>
+        <tr>
+            <td>salary</td>
+            <td><input [(ngModel)]="employee.salary" type="number"></td>
+        </tr>
+        <tr>
+            <td>eMobileNumber</td>
+            <td><input [(ngModel)]="employee.eMobilenumber" type="text"></td>
+        </tr>
+        <tr>
+            <td>dept1</td>
+            <td><input [(ngModel)]="employee.dept1" type="text"></td>
+        </tr>
+
+    </table>
+    <button (click)="submit()">Submit</button>
+</div>

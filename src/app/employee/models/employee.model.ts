@@ -1,7 +1,8 @@
 export interface Employee{
     id:number;
-    name:string;
-    address:string;
+    eName:string;
+    eAddress:string;
     salary:number;
-    mobilenumber:number;
+    eMobilenumber:number;
+    dept1:string;
 }

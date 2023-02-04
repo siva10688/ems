@@ -12,11 +12,10 @@ export class EmployeeDetailsComponent implements OnInit {
   constructor(public service: EmployeeService) { }
 
   ngOnInit(): void {
-    this.service.employee$.subscribe(employee => {
-      if (employee) {
-        this.employee = employee;
-      }
-    })
+    this.service.employeeId$.subscribe(id => {
+      this.service.getEmployee(id).subscribe(data => {
+        this.employee = data;
+      })
+    });
   }
-
 }

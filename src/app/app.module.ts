@@ -14,7 +14,9 @@ import { StudentListComponent } from './student/student-list/student-list.compon
 import { StudentDetailsComponent } from './student/student-details/student-details.component';
 import { HomeComponent } from './home/home.component';
 import { ErrorComponent } from './error/error.component';
-import { EmployeeFormsComponent } from './employee-forms/employee-forms.component';
+import { EmployeeFormsComponent } from './employee/employee-forms/employee-forms.component';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,12 +32,15 @@ import { EmployeeFormsComponent } from './employee-forms/employee-forms.componen
     StudentDetailsComponent,
     HomeComponent,
     ErrorComponent,
-    EmployeeFormsComponent
+    EmployeeFormsComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    CommonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

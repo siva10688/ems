@@ -24,18 +24,20 @@
         <thead>Employee List</thead>
         <tr>
             <th>id</th>
-            <th>name</th>
-            <th>address</th>
+            <th>eName</th>
+            <th>eAddress</th>
             <th>salary</th>
-            <th>mobilenumber</th>
+            <th>eMobilenumber</th>
+            <th>dept1</th>
             <th>Actions</th>
         </tr>
         <tr *ngFor="let employee of employees">
             <td>{{employee.id}}</td>
-            <td>{{employee.name | uppercase}}</td>
-            <td>{{employee.address | customlower}}</td>
+            <td>{{employee.eName | uppercase}}</td>
+            <td>{{employee.eAddress | customlower}}</td>
             <td>{{employee.salary|currency}}</td>
-            <td>{{employee.mobilenumber}}</td>
+            <td>{{employee.eMobilenumber}}</td>
+            <td>{{employee.dept1}}</td>
             <td><button (click)="view(employee)">View</button><button (click)="edit(employee)">Edit</button></td>
         </tr>
     </table>
