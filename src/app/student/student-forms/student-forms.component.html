@@ -1,0 +1,27 @@
+
+<div class="container-fluid" *ngIf="student">
+
+    <h2>student-forms</h2>
+    <table>
+        <tr>
+            <td>id</td>
+            <td><input [(ngModel)]="student.sId" type="number"></td>
+        </tr>
+        <tr>
+            <td>sName</td>
+            <td><input [(ngModel)]="student.sName" type="text"></td>
+        </tr>
+        <tr>
+            <td>sClass</td>
+            <td><input [(ngModel)]="student.sClass" type="text"></td>
+        </tr>
+        <tr>
+            <td>gender</td>
+            <td><input [(ngModel)]="student.gender" type="text"></td>
+        </tr>
+        
+
+    </table>
+    <button (click)="submit()">Submit</button>
+
+</div>

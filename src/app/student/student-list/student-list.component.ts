@@ -16,21 +16,43 @@ export class StudentListComponent implements OnInit {
 
 
   constructor(public service:StudentService) { }
+    ngOnInit(): void {
 
-  ngOnInit(): void {
-    this.students=[{name:'abc',id:501,branch:'CSE',mobilenumber:9876543211},
-  {name:'def',id:502,branch:'EEE',mobilenumber:8765432190},
-  {name:'ghi',id:503,branch:'ECE',mobilenumber:9532167095},
-  {name:'jkl',id:504,branch:'CSE',mobilenumber:9867432561},
-  {name:'mno',id:505,branch:'EEE',mobilenumber:8765904321}];
+    this.service.getStudents()
+    .subscribe(data=>{
+      this.students=data;
+    });
+
+    this.service.reload$.subscribe(data => {
+      if (data) {
+        this.service.getStudents()
+          .subscribe(data => {
+            this.students= data;
+          });
+  }
+});
+
+  
+  //   this.students=[{sName:'abc',sId:501,sClass:'CSE',gender:'female'},
+  // {sName:'def',sId:502,sClass:'EEE',gender:'male'},
+  // {sName:'ghi',sId:503,sClass:'ECE',gender:'female'},
+  // {sName:'jkl',sId:504,sClass:'CSE',gender:'male'},
+  // {sName:'mno',sId:505,sClass:'EEE',gender:'female'}];
   }
 
 
 addStudent() {
-    this.add.emit("xyz added");
+    this.service.action="add";
+    this.service.selectStudent(0);
   }
 
-  viewStudent(student: student) {
-    this.service.student = student
+  view(student: student) {
+    this.service.action = "view";
+    this.service.selectStudent(student.sId);
+
+  }
+  edit(student: student) {
+    this.service.action = "edit";
+    this.service.selectStudent(student.sId);
   }
   }

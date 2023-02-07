@@ -1,2 +1,3 @@
 <app-student-list [title]="title" (add)="StudentAdded($event)"></app-student-list>
-<app-student-details></app-student-details>
+<app-student-forms *ngIf="service.action==='add' ||service.action==='edit'"></app-student-forms>
+<app-student-details *ngIf="service.action==='view'"></app-student-details>

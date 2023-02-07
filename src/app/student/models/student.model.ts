@@ -1,6 +1,7 @@
 export interface student{
-    name:string;
-    id:number;
-    branch:string;
-    mobilenumber:number;
+    
+    sId:number;
+    sName:string;
+    sClass:string;
+    gender:string;
 }

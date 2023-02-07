@@ -1,5 +1,5 @@
 <div> Student Details</div>
-<button (click)="addStudent()">Add student</button>
+<button (click)="addStudent()">Add Student</button>
 <div class="container-fluid">
     <div>{{title}}</div>
     
@@ -7,17 +7,20 @@
     <table>
         <thead>Student List</thead>
         <tr>
-            <th>name</th>
-            <th>id</th>
-            <th>branch</th>
-            <th>mobilenumber</th>
+            <th>sName</th>
+            <th>sId</th>
+            <th>sClass</th>
+            <th>gender</th>
+            <th>Actions</th>
+
         </tr>
         <tr *ngFor="let student of students">
-            <td>{{student.name}}</td>
-            <td>{{student.id}}</td>
-            <td>{{student.branch}}</td>
-            <td>{{student.mobilenumber}}</td>
-            <td><button (click)="viewStudent(student)">View</button></td>
+            <td>{{student.sName}}</td>
+            <td>{{student.sId}}</td>
+            <td>{{student.sClass}}</td>
+            <td>{{student.gender}}</td>
+            <td><button (click)="view(student)">View</button>
+                <button (click)="edit(student)">Edit</button></td>
 
         </tr>
     </table>
